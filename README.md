@@ -20,20 +20,20 @@ This data relates to direct marketing campaigns conducted by a Portuguese bankin
 Target Variable: The primary goal is a binary classification task, to predict whether a client will subscribe to the term deposit (variable y).
 
 Feautures
-| ** Feature** | **Feature_Type** | **Description** |
+| **Feature** | **Feature_Type** | **Description** |
 | ------------- |-------------| -------------|
 |age|	numeric|	age of a person|
-|job|	Categorical,nominal|	type of job ('admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')|
-|marital|	categorical,nominal|	marital status ('divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)|
-|education|	categorical,nominal|	('basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown')|
-|default|	categorical,nominal|	has credit in default? ('no','yes','unknown')|
-|housing|	categorical,nominal|	has housing loan? ('no','yes','unknown')|
-|loan|	categorical,nominal|	has personal loan? ('no','yes','unknown')|
-|contact|	categorical,nominal|	contact communication type ('cellular','telephone')|
-|month|	categorical,ordinal|	last contact month of year ('jan', 'feb', 'mar', …, 'nov', 'dec')|
-|day_of_week|	categorical,ordinal|	last contact day of the week ('mon','tue','wed','thu','fri')|
+|job|	Categorical, nominal|	type of job ('admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')|
+|marital|	categorical, nominal|	marital status ('divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)|
+|education|	categorical, nominal|	('basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown')|
+|default|	categorical, nominal|	has credit in default? ('no','yes','unknown')|
+|housing|	categorical, nominal|	has housing loan? ('no','yes','unknown')|
+|loan|	categorical, nominal|	has personal loan? ('no','yes','unknown')|
+|contact|	categorical, nominal|	contact communication type ('cellular','telephone')|
+|month|	categorical, ordinal|	last contact month of year ('jan', 'feb', 'mar', …, 'nov', 'dec')|
+|day_of_week|	categorical, ordinal|	last contact day of the week ('mon','tue','wed','thu','fri')|
 |duration|	numeric|	last contact duration, in seconds . Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no')|
 |campaign|	numeric|	number of contacts performed during this campaign and for this client (includes last contact)|
 |pdays|	numeric|	number of days that passed by after the client was last contacted from a previous campaign (999 means client was not previously contacted)|
 |previous|	numeric|	number of contacts performed before this campaign and for this client|
-|poutcome|	categorical,nominal|	outcome of the previous marketing campaign ('failure','nonexistent','success')|
+|poutcome|	categorical, nominal|	outcome of the previous marketing campaign ('failure','nonexistent','success')|
