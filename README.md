@@ -20,7 +20,8 @@ This data relates to direct marketing campaigns conducted by a Portuguese bankin
 Target Variable: The primary goal is a binary classification task, to predict whether a client will subscribe to the term deposit (variable y).
 
 Feautures
-| ** Feature** | **Feature_Type** | **Description**
+| ** Feature** | **Feature_Type** | **Description** |
+| ------------- |-------------| -------------|
 |age|	numeric|	age of a person|
 |job|	Categorical,nominal|	type of job ('admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')|
 |marital|	categorical,nominal|	marital status ('divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)|
