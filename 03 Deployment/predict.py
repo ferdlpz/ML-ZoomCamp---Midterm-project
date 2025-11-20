@@ -1,9 +1,8 @@
 import pickle
 
 from flask import Flask, request, jsonify
-import pandas as pd
 import numpy as np
-
+import xgboost as xgb
 
 model_file = 'model_eta=0.1_max_depth=5_min_child_weight=5.bin'
 
@@ -21,11 +20,16 @@ def predict():
     customer = request.get_json()
     
     X = dv.transform([customer])
-    y_pred = model.predict_proba(X)[:, 1]
-    long_term = (y_pred >= 0.5)
+    dtest = xgb.DMatrix(X, feature_names=dv.get_feature_names_out())
+    y_pred = model.predict(dtest)
+    # Probabilidades (aplicando Sigmoide al score)
+    probabilidades = 1 / (1 + np.exp(-y_pred)) 
+
+    # Etiquetas (Clase 1 si probabilidad > 0.5)
+    long_term = (probabilidades >= 0.5).astype(int)
 
     result = {
-        'purchase_probability': float(y_pred[0]),
+        'purchase_probability': float(probabilidades[0]),
         'long_term_customer': bool(long_term[0])
     }
     
