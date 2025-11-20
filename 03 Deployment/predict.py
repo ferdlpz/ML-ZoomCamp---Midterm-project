@@ -20,7 +20,8 @@ def predict():
     customer = request.get_json()
     
     X = dv.transform([customer])
-    dtest = xgb.DMatrix(X, feature_names=dv.get_feature_names_out())
+    features = list(dv.get_feature_names_out())
+    dtest = xgb.DMatrix(X, feature_names=features)
     y_pred = model.predict(dtest)
     # Probabilidades (aplicando Sigmoide al score)
     probabilidades = 1 / (1 + np.exp(-y_pred)) 
