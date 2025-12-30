@@ -3,8 +3,6 @@ import pickle
 import pandas as pd
 import numpy as np
 
-import matplotlib.pyplot as plt
-
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import roc_auc_score, auc
@@ -14,7 +12,6 @@ from tqdm.auto import tqdm
 
 import warnings
 warnings.filterwarnings('ignore')
-
 
 # parameters
 eta = 0.1
